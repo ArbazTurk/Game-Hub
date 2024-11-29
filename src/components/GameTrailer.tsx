@@ -1,11 +1,12 @@
 import useTrailers from "../hooks/useTrailers";
 
 interface Props {
-  gameId: number;
+  gameSlug: string;
 }
 
-const GameTrailer = ({ gameId }: Props) => {
-  const { data, error, isLoading } = useTrailers(gameId);
+const GameTrailer = ({ gameSlug }: Props) => {
+  const { data, error, isLoading } = useTrailers(gameSlug);
+  console.log('data',data);
 
   if (isLoading) return null;
 
