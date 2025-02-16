@@ -6,7 +6,7 @@ import useGames from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
 import GameCardSkeleton from "./GameCardSkeleton";
-import useGameQueryStore from "../store";
+// import useGameQueryStore from "../store";
 
 // interface Props {
 //   gameQuery: GameQuery;
@@ -15,7 +15,7 @@ import useGameQueryStore from "../store";
 const GameGrid = () =>
   // { gameQuery }: Props
   {
-    const gameQuery = useGameQueryStore((s) => s.gameQuery);
+    // const gameQuery = useGameQueryStore((s) => s.gameQuery);
     const {
       data,
       error,
@@ -31,7 +31,6 @@ const GameGrid = () =>
 
     const fetchedGamesCount =
       data?.pages.reduce((total, page) => total + page.results.length, 0) || 0;
-
     return (
       // <Box padding="10px">
       <InfiniteScroll
